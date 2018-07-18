@@ -43,7 +43,7 @@ def main():
                 newImgName = \
                     convertOGIntoSquare.convertOGIntoSquare(f, inDir, outDir, i, imageSize)
 
-                print("\tConverted %s" %(newImgName))
+                print("\tConverted %s " %(newImgName))
 
                 # increment so that file names are different
                 i += 1
