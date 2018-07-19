@@ -17,7 +17,7 @@ import resizeSquare
 #       inDir:      where photo is located
 #       outDir:     where photo is being stored
 #       imgNum:     img number (used for naming saved image)
-#       imageSize:  desired img size (in this case 100)
+#       imageSize:  desired img size
 #
 def convertOGIntoSquare(imgName, inDir, outDir, imgNum, imageSize):
 
@@ -28,7 +28,7 @@ def convertOGIntoSquare(imgName, inDir, outDir, imgNum, imageSize):
         squareArray = getSquare.squareImage(img)[0]
         sizeOfSquare = getSquare.squareImage(img)[1]
 
-        # get ratio between width and desired imageSize (100)
+        # get ratio between width and desired imageSize 
         widthRatio = sizeOfSquare / imageSize
 
         # if it's not evenly divisable by imageSize, make it the next closest

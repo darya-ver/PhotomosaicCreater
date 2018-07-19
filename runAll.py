@@ -10,13 +10,17 @@ import convertIntoFinalImage
 import imageSetting
 import os
 import math
+import sys
 from PIL import Image
 
 #
 #   runs all the methods together
 #
-def main():
+def main(argv):
 
+    #print(argv)
+    newFileName = argv[0]
+    print(newFileName)
     # the directory where original images are found
     inDir = './originalPhotos/'
 
@@ -28,7 +32,7 @@ def main():
     i = 0
 
     # resolution of the square images that make up the larger image
-    imageSize = 100.0
+    imageSize = 115.0
 
     ################################
     #       REDUCE IMAGES TO 100x100
@@ -102,15 +106,15 @@ def main():
 
     # sets the final array of pixels to the array that the function returns
     new_pixels = \
-        convertIntoFinalImage.convertIntoFinalImage(phts_order, width, height)
+        convertIntoFinalImage.convertIntoFinalImage(phts_order, width, height, int(imageSize))
 
     newim = Image.new("RGB", (width * int(imageSize), height * int(imageSize)))
     newim.putdata(new_pixels)
-    imageSetting.save_img(newim, "babaColage1.jpg")
+    imageSetting.save_img(newim, newFileName)
     imageSetting.show_img(newim)
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])
 
 
 

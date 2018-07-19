@@ -34,13 +34,16 @@ def convertIntoDoubleArray(arr, width, height):
 #       height:         height of final image (# of photos in height)
 #       width:          width of final image (# of photos in width)
 #
-def convertIntoFinalImage(arrayOfImages, height, width):
+def convertIntoFinalImage(arrayOfImages, height, width, sizeOfSquare):
 
     # convert into double array
     doubleArray = convertIntoDoubleArray(arrayOfImages, height, width)
 
     # where final image pixels will be stored
     finalImage = []
+
+    finalPixelSize = height * width * sizeOfSquare * sizeOfSquare
+    currentPixelNum = 0
 
     # go throug each row in
     for rowList in doubleArray:
@@ -52,15 +55,38 @@ def convertIntoFinalImage(arrayOfImages, height, width):
         # go through width of images (goes through width number of images)
         for i in range(len(rowList)):
 
-            while row * 100 < 100 * 100:
+            while row * sizeOfSquare < sizeOfSquare * sizeOfSquare:
 
                 # goes through each list in the row
                 for pixelList in rowList:
-                    imgIndx = row * 100
+                    imgIndx = row * sizeOfSquare
 
-                    for i in range(100):
+                    for i in range(sizeOfSquare):
                         finalImage.append(pixelList[imgIndx])
                         imgIndx += 1
+                        currentPixelNum += 1
+
+                        #print(str(currentPixelNum / finalPixelSize * 100) + "%")
+                        if (currentPixelNum / finalPixelSize) == 0.1:
+                            print("\t10%")
+                        elif (currentPixelNum / finalPixelSize) == 0.2:
+                            print("\t20%")
+                        elif (currentPixelNum / finalPixelSize) == 0.3:
+                            print("\t30%")
+                        elif (currentPixelNum / finalPixelSize) == 0.4:
+                            print("\t40%")
+                        elif (currentPixelNum / finalPixelSize) == 0.5:
+                            print("\t50%")
+                        elif (currentPixelNum / finalPixelSize) == 0.6:
+                            print("\t60%")
+                        elif (currentPixelNum / finalPixelSize) == 0.7:
+                            print("\t70%")
+                        elif (currentPixelNum / finalPixelSize) == 0.8:
+                            print("\t80%")
+                        elif (currentPixelNum / finalPixelSize) == 0.9:
+                            print("\t90%")
+                        elif (currentPixelNum / finalPixelSize) == 1:
+                            print("\t100%")
                 row += 1
 
     return finalImage

@@ -27,9 +27,4 @@ def averageColor(im):
 
     finalColor = (finalRed, finalGreen, finalBlue)
 
-    # for i in range(100 * 100):
-    #     new_pixels.append(finalColor)
-
-    #newim = Image.new("RGB", (100, 100))
-    #newim.putdata(new_pixels)
     return finalColor
