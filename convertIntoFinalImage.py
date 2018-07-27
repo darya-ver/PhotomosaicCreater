@@ -13,6 +13,7 @@ import math
 #       arr:        arr that is being converted
 #       width:      width of double array (number of columns)
 #       height:     height of double array (number of rows)
+#
 def convertIntoDoubleArray(arr, width, height):
     returnArray = []
     index = 0
