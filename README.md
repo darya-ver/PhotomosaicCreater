@@ -46,14 +46,14 @@ This is the help message that will appear:
 >
 > optional arguments:
 >
->   -h, --help            show this help message and exit
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-h, --help            show this help message and exit
 >
 > required arguments:
 >
->   -i INPUT, --input INPUT
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-i INPUT, --input INPUT
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;original image that is being converted
 >
->   -o OUTPUT, --output OUTPUT
+>> -o OUTPUT, --output OUTPUT
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file name for final image to be saved to
