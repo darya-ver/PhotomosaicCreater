@@ -29,6 +29,8 @@ Copy all your images that you want to use as the database of images into the fol
 
 There are already 6 images in the folder, each representing a color from the rainbow. Feel free to get rid of these images if you do not like them.
 
+![Red](/originalPhotos/red.jpg)
+
 ## Setting up original image
 Copy your original image into the main folder "PhotomosaicCreater". Make sure the image is relatively small - the biggest dimension should be no more than 150 pixels. You can make the image bigger, but the program will take an extremely long time to run.
 
