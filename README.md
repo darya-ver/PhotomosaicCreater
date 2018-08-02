@@ -79,3 +79,6 @@ So, to run, provide an input file and an output file. This will run the program.
 
 ### Windows
 `python runAll.py -i dogs.jpg -o dogsMosaic.jpg`
+
+## Program run time
+The program will take while to run, so be patient. It could take up to an hour. Keep your laptop plugged in and open so that it can run. The steps of the process will be printed to your terminal screen throughout the process so that you are updated on where the program is.  
