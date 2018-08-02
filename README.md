@@ -35,20 +35,20 @@ Make sure you are still in the "PhotomosaicCreater" folder in your terminal (or 
 Make sure you have Python3 ([Python3 download](https://www.python.org/downloads/)).
 
 ### Mac
-> python3 runAll.py -h
+`<addr>` python3 runAll.py -h
 
 ### Windows
-> python runAll.py -h
+`<addr>` python runAll.py -h
 
 This is the help message that will appear:
 
-> usage: runAll.py [-h] -i INPUT -o OUTPUT
+`<addr>` usage: runAll.py [-h] -i INPUT -o OUTPUT
 
-> optional arguments:
->   -h, --help            show this help message and exit
+`<addr>` optional arguments:
+`<addr>`   -h, --help            show this help message and exit
 
-> required arguments:
->   -i INPUT, --input INPUT
+`<addr>` required arguments:
+`<addr>`   -i INPUT, --input INPUT
                         original image that is being converted
->   -o OUTPUT, --output OUTPUT
->                         file name for final image to be saved to
+`<addr>`   -o OUTPUT, --output OUTPUT
+`<addr>`                         file name for final image to be saved to
