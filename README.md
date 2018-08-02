@@ -29,6 +29,9 @@ Copy all your images that you want to use as the database of images into the fol
 
 There are already 6 images in the folder, each representing a color from the rainbow. Feel free to get rid of these images if you do not like them.
 
+## Setting up original image
+Copy your original image into the main folder "PhotomosaicCreater". Make sure the image is relatively small - the biggest dimension should be no more than 150 pixels. You can make the image bigger, but the program will take an extremely long time to run.
+
 ## Running the program
 Make sure you are still in the "PhotomosaicCreater" folder in your terminal (or Windows Equivalent).
 
@@ -57,3 +60,13 @@ This is the help message that will appear:
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-o OUTPUT, --output OUTPUT
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file name for final image to be saved to
+
+So, to run, provide an input file and an output file. This will run the program. Any other errors that occur will be printed to the screen and you can adjust accordingly.
+
+## Example run
+
+### Mac
+`python3 runAll.py -i dogs.jpg -o dogsMosaic.jpg`
+
+### Windows
+`python runAll.py -i dogs.jpg -o dogsMosaic.jpg`
