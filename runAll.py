@@ -12,16 +12,37 @@ import os
 import math
 import sys
 from PIL import Image
+import argparse
 
 #
 #   runs all the methods together
 #
-def main(argv):
+def main():
 
-    #print(argv)
-    newFileName = argv[0]
+    # parse the arguments given in the command line
+    parser = argparse.ArgumentParser()
+    req_grp = parser.add_argument_group(title='required arguments')
+    req_grp.add_argument("-i", "--input", required=True, help="original image that is being converted")
+    req_grp.add_argument("-o", "--output", required=True, help="file name for final image to be saved to")
+    args = parser.parse_args()
 
-    # check the image doesn't already exist
+    # set the variables accordingly
+    refImgName = args.input
+    newFileName = args.output
+
+    # the original reference image
+    referenceImg = ""
+
+    # make sure the OG image exists
+    try:
+        referenceImg = imageSetting.load_img(refImgName, "")
+
+    # if it doesn't exist, print error message
+    except:
+        print("\nERROR! Your file was not found:\t", refImgName)
+        exit()
+
+    # check the newFile doesn't already exist
     for root, dirs, filenames in os.walk("."):
         for f in filenames:
             if newFileName == f:
@@ -37,9 +58,6 @@ def main(argv):
     # directory where reduced photos will be saved
     outDir = './reducedPhotos/'
 
-    # reference image
-    refImgName = "hand.png"
-
     print("\nThis program will be converting", refImgName + ".")
 
     # used to name the images
@@ -49,7 +67,7 @@ def main(argv):
     imageSize = 115.0
 
     ################################
-    #       REDUCE IMAGES TO 100x100
+    #       REDUCE IMAGES TO 115x115
     ################################
     print("\n>> Reducing images...\n")
 
@@ -75,9 +93,6 @@ def main(argv):
 
     # the directory where square 100x100 images are found
     inDir = './reducedPhotos/'
-
-    # the original reference image
-    referenceImg = imageSetting.load_img(refImgName, "")
 
     # get the array of pixels for the image and its size
     pixels = referenceImg.getdata()
@@ -138,7 +153,7 @@ def main(argv):
     print("\n*** Done! Your new image has been created. ")
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main()
 
 
 
