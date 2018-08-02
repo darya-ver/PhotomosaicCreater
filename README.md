@@ -29,6 +29,7 @@ Copy all your images that you want to use as the database of images into the fol
 
 There are already 8 images in the folder, each representing a color from the rainbow. Feel free to get rid of these images if you do not like them.
 
+<img src="/originalPhotos/red.jpg" alt="drawing" width="100px"/>
 ![Red](/originalPhotos/red.jpg =100)
 ![orange](/originalPhotos/orange.jpg =100)
 ![yellow](/originalPhotos/yellow.jpg =100)
