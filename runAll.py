@@ -20,13 +20,17 @@ def main(argv):
 
     #print(argv)
     newFileName = argv[0]
-    print(newFileName)
+
     # the directory where original images are found
     inDir = './originalPhotos/'
 
     # directory where reduced photos will be saved
     outDir = './reducedPhotos/'
 
+    # reference image
+    refImgName = "nicoleAndDarya.png"
+
+    print("\nThis program will be converting", refImgName)
 
     # used to name the images
     i = 0
@@ -57,13 +61,13 @@ def main(argv):
     #       MAKE FINAL IMAGE
     ########################
 
-    print("\nMatching pixels with images...\n")
+    print("\nDone reducing images. \n\nMatching pixels with images...\n")
 
     # the directory where square 100x100 images are found
     inDir = './reducedPhotos/'
 
     # the original reference image
-    referenceImg = imageSetting.load_img("jannittaDog.png", "")
+    referenceImg = imageSetting.load_img(refImgName, "")
 
     # get the array of pixels for the image and its size
     pixels = referenceImg.getdata()
@@ -108,10 +112,14 @@ def main(argv):
     new_pixels = \
         convertIntoFinalImage.convertIntoFinalImage(phts_order, width, height, int(imageSize))
 
+    print("\nDone creating final image...")
+    print("Pulling data into jpg photo")
     newim = Image.new("RGB", (width * int(imageSize), height * int(imageSize)))
     newim.putdata(new_pixels)
+    print("\nSaving image...")
     imageSetting.save_img(newim, newFileName)
     imageSetting.show_img(newim)
+    print("\n\tDone.")
 
 if __name__ == '__main__':
     main(sys.argv[1:])

@@ -67,9 +67,11 @@ def convertIntoFinalImage(arrayOfImages, height, width, sizeOfSquare):
                         imgIndx += 1
                         currentPixelNum += 1
 
-                        #print(str(currentPixelNum / finalPixelSize * 100) + "%")
-                        if (currentPixelNum / finalPixelSize) == 0.1:
-                            print("\t10%")
+                        # print percentage of pixels program has gone through
+                        if (currentPixelNum / finalPixelSize) < 0.1:
+                            print("\t0%")
+                        elif (currentPixelNum / finalPixelSize) == 0.1:
+                                print("\t10%")
                         elif (currentPixelNum / finalPixelSize) == 0.2:
                             print("\t20%")
                         elif (currentPixelNum / finalPixelSize) == 0.3:
