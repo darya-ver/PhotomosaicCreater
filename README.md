@@ -8,36 +8,36 @@ Once that is done, open your terminal (or Windows equivalent) and navigate to yo
 
 To make sure you have everything, type "ls" (or "dir" in Windows). This is what should appear (if this doesn't appear, try deleting the folder and re-downloading):
 
-README.md
-convertOGIntoSquare.py
-imageSetting.py
-reduceImageSize.py
-darAndNicColor.jpg
-jannitta3Colors.jpg
-reducedPhotos (folder)
-averageColor.py
-findClosestColor.py
-jannitta3Colors2.jpg
-resizeSquare.py
-convertIntoFinalImage.py
-getSquare.py
-originalPhotos (folder)
-runAll.py
+* README.md
+* convertOGIntoSquare.py
+* imageSetting.py
+* reduceImageSize.py
+* darAndNicColor.jpg
+* jannitta3Colors.jpg
+* reducedPhotos (folder)
+* averageColor.py
+* findClosestColor.py
+* jannitta3Colors2.jpg
+* resizeSquare.py
+* convertIntoFinalImage.py
+* getSquare.py
+* originalPhotos (folder)
+* runAll.py
 
-##Setting up image bank
+## Setting up image bank
 Copy all your images that you want to use as the database of images into the folder "originalPhotos" located in the "PhotomosaicCreater" folder.
 
 There are already 6 images in the folder, each representing a color from the rainbow. Feel free to get rid of these images if you do not like them.
 
-##Running the program
+## Running the program
 Make sure you are still in the "PhotomosaicCreater" folder in your terminal (or Windows Equivalent).
 
 Make sure you have Python3 ([Python3 download](https://www.python.org/downloads/)).
 
-###Mac
+### Mac
 > python3 runAll.py -h
 
-###Windows
+### Windows
 > python runAll.py -h
 
 This is the help message that will appear:
