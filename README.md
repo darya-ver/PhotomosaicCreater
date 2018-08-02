@@ -52,8 +52,8 @@ This is the help message that will appear:
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-i INPUT, --input INPUT
 >
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;original image that is being converted
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;original image that is being converted
 >
->> -o OUTPUT, --output OUTPUT
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-o OUTPUT, --output OUTPUT
 >
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file name for final image to be saved to
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file name for final image to be saved to
