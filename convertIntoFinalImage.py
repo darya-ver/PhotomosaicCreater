@@ -46,6 +46,9 @@ def convertIntoFinalImage(arrayOfImages, height, width, sizeOfSquare):
     finalPixelSize = height * width * sizeOfSquare * sizeOfSquare
     currentPixelNum = 0
 
+    print("\t0%")
+
+
     # go throug each row in
     for rowList in doubleArray:
 
@@ -68,9 +71,7 @@ def convertIntoFinalImage(arrayOfImages, height, width, sizeOfSquare):
                         currentPixelNum += 1
 
                         # print percentage of pixels program has gone through
-                        if (currentPixelNum / finalPixelSize) < 0.1:
-                            print("\t0%")
-                        elif (currentPixelNum / finalPixelSize) == 0.1:
+                        if (currentPixelNum / finalPixelSize) == 0.1:
                                 print("\t10%")
                         elif (currentPixelNum / finalPixelSize) == 0.2:
                             print("\t20%")

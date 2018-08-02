@@ -21,6 +21,16 @@ def main(argv):
     #print(argv)
     newFileName = argv[0]
 
+    # check the image doesn't already exist
+    for root, dirs, filenames in os.walk("."):
+        for f in filenames:
+            if newFileName == f:
+                print("\nERROR! This image already exists.")
+                print("Are you sure you want to override? (y/n)")
+                answer = input("\t>> ")
+                if answer == "n" or answer == "":
+                    exit()
+
     # the directory where original images are found
     inDir = './originalPhotos/'
 
@@ -28,9 +38,9 @@ def main(argv):
     outDir = './reducedPhotos/'
 
     # reference image
-    refImgName = "nicoleAndDarya.png"
+    refImgName = "hand.png"
 
-    print("\nThis program will be converting", refImgName)
+    print("\nThis program will be converting", refImgName + ".")
 
     # used to name the images
     i = 0
@@ -41,11 +51,11 @@ def main(argv):
     ################################
     #       REDUCE IMAGES TO 100x100
     ################################
-    print("\nReducing images...\n")
+    print("\n>> Reducing images...\n")
 
     for root, dirs, filenames in os.walk(inDir):
         for f in filenames:
-            if ('.jpg' in f or '.JPG' in f) and not ("SQUARE" in f):
+            if ('.jpg' in f or '.JPG' in f):
 
                 # convert the image into a square 100x100 and save that image
                 newImgName = \
@@ -61,7 +71,7 @@ def main(argv):
     #       MAKE FINAL IMAGE
     ########################
 
-    print("\nDone reducing images. \n\nMatching pixels with images...\n")
+    print("\nDone reducing images. \n\n>> Matching pixels with images...")
 
     # the directory where square 100x100 images are found
     inDir = './reducedPhotos/'
@@ -104,22 +114,28 @@ def main(argv):
         colorInd = findClosestColor.findClosestColor(avg_colors, p)
         phts_order.append(new_pixel_image_arrays[colorInd])
 
-    print("\nDone matching pixels with images...\n")
+    print("Done matching pixels with images.")
 
-    print("\nCreating final image...\n")
+    print("\n>> Creating final image...\n")
 
     # sets the final array of pixels to the array that the function returns
     new_pixels = \
         convertIntoFinalImage.convertIntoFinalImage(phts_order, width, height, int(imageSize))
+    print("\nDone creating final image.")
 
-    print("\nDone creating final image...")
-    print("Pulling data into jpg photo")
+    # creating the image from the pixel array
+    print("\n>> Pulling data into jpg photo...")
     newim = Image.new("RGB", (width * int(imageSize), height * int(imageSize)))
     newim.putdata(new_pixels)
-    print("\nSaving image...")
+    print("Done pulling data.")
+
+    # save image and show it
+    print("\n>> Saving image...")
     imageSetting.save_img(newim, newFileName)
+    print("Done saving image.")
     imageSetting.show_img(newim)
-    print("\n\tDone.")
+
+    print("\n*** Done! Your new image has been created. ")
 
 if __name__ == '__main__':
     main(sys.argv[1:])
