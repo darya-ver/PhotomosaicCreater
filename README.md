@@ -42,13 +42,13 @@ Make sure you have Python3 ([Python3 download](https://www.python.org/downloads/
 
 This is the help message that will appear:
 
-`usage: runAll.py [-h] -i INPUT -o OUTPUT`
-
-`optional arguments:`
-`  -h, --help            show this help message and exit`
-
-`required arguments:`
-`  -i INPUT, --input INPUT`
-                        `original image that is being converted`
-`  -o OUTPUT, --output OUTPUT`
-`                        file name for final image to be saved to`
+> usage: runAll.py [-h] -i INPUT -o OUTPUT
+>
+> optional arguments:
+>   -h, --help            show this help message and exit
+>
+> required arguments:
+>   -i INPUT, --input INPUT
+>                        original image that is being converted
+>   -o OUTPUT, --output OUTPUT
+>                         file name for final image to be saved to
