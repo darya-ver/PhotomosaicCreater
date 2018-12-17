@@ -12,12 +12,9 @@ To make sure you have everything, type "ls" (or "dir" in Windows). This is what 
 * convertOGIntoSquare.py
 * imageSetting.py
 * reduceImageSize.py
-* darAndNicColor.jpg
-* jannitta3Colors.jpg
 * reducedPhotos (folder)
 * averageColor.py
 * findClosestColor.py
-* jannitta3Colors2.jpg
 * resizeSquare.py
 * convertIntoFinalImage.py
 * getSquare.py

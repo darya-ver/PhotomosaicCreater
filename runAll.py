@@ -2,6 +2,7 @@
 #       runAll.py
 #################
 
+
 import convertOGIntoSquare
 import averageColor
 import findClosestColor
